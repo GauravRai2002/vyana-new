@@ -15,7 +15,7 @@ function MatchResult() {
                 <img className='md:w-3/5' src={bottom} alt="" />
             </div>
 
-            <div className="flex flex-wrap items-center">
+            <div className="flex flex-wrap gap-0 items-center md:justify-normal justify-center">
                 <Match team1='CORE' team2='STERLING' score1='05' score2='02' />
                 <Match team1='FLEXI' team2='EMERGING' score1='03' score2='04' />
                 <Match team1='FLOATING' team2='DYNAMIC' score1='04' score2='03' />

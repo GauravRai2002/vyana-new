@@ -4,7 +4,7 @@ import './match.css'
 function Match({team1,team2,score1,score2}) {
     return (
         <>
-            <div className="card w-96 md:w-1/3 md:scale-90 border border-solid border-zinc-800 text-center  bg-base-100 shadow-xl">
+            <div className="card w-fit md:w-1/3 scale-75 md:scale-90 border border-solid border-zinc-800 text-center  bg-base-100 shadow-xl">
                 <div className="card-body items-center justify-center  flex flex-row gap-2">
 
                     <div className=''>
