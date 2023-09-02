@@ -22,7 +22,7 @@ function MatchResult() {
                 <Match team1='BOND' team2='ULTRA' score1='04' score2='03' />
                 <Match team1='CORE' team2='EMERGING' score1='04' score2='03' winner={'SEMI FINAL - 1'}/>
                 <Match team1='FLOATING' team2='BOND' score1='06' score2='01' winner={'SEMI FINAL - 2'}/>
-                <Match team1='CORE' team2='FLOATING' score1='03' score2='02' winner={' FINAL '}/>
+                <Match team1='CORE' team2='FLOATING' score1='04' score2='02' winner={' FINAL '}/>
             </div>
         </>
     )
