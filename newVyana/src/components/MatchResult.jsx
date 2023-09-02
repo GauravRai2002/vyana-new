@@ -19,7 +19,8 @@ function MatchResult() {
                 <Match team1='CORE' team2='STERLING' score1='05' score2='02' />
                 <Match team1='FLEXI' team2='EMERGING' score1='03' score2='04' />
                 <Match team1='FLOATING' team2='DYNAMIC' score1='04' score2='03' />
-                <Match team1='BOND' team2='ULTRA' score1='03' score2='02' />
+                <Match team1='BOND' team2='ULTRA' score1='04' score2='03' />
+                <Match team1='CORE' team2='EMERGING' score1='00' score2='00' winner={'SEMI FINAL - 1'}/>
             </div>
         </>
     )
