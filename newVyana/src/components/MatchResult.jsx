@@ -12,7 +12,8 @@ function MatchResult() {
             </div>
 
             <div className="flex flex-wrap items-center">
-                <Match team1='CORE' team2='STERLING' score1='02' score2='01'/>
+                <Match team1='CORE' team2='STERLING' score1='05' score2='02'/>
+                <Match team1='FLEXI' team2='EMERGING' score1='00' score2='00'/>
             </div>
         </>
     )

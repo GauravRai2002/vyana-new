@@ -38,8 +38,8 @@ function ScheduleTable(props) {
                                 <td className='text-center font-bold py-6 bg-emerald-600'>{props.court[1]}</td>
                                 <td className='text-center font-bold py-6 bg-emerald-600'>{props.timing[1]}</td>
                                 <td className='text-center font-bold py-6 bg-emerald-600'>{props.event[1]}</td>
-                                <td className='text-center font-bold py-6 bg-amber-400'>Core</td>
-                                <td className='text-center font-bold py-6 bg-red-400'>Sterling</td>
+                                <td className='text-center font-bold py-6 bg-amber-400'>{props.team1}</td>
+                                <td className='text-center font-bold py-6 bg-red-400'>{props.team2}</td>
                             </tr>
                             <tr>
                                 <th className='text-center font-bold py-6 bg-emerald-600'>3</th>
