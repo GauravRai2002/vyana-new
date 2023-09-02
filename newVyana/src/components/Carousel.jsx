@@ -55,7 +55,7 @@ function Carousel() {
                     </div>
                 </div>
                 <div id="slide7" className="carousel-item relative w-full">
-                    <ScheduleTable group={'FINAL'} time={''} court={['1','2','3','1','2','3','1']} timing={['03 : 00 PM','03 : 00 PM','03 : 00 PM','03 :30 PM','03 : 30 PM','03 : 30 PM','04 : 00 PM',]} event={['OPEN 1','OPEN 2','OPEN 3','MIXED 1','MIXED 2','VETERAN','OPEN 4']} team1={'CORE'} team2={'TBD'}/>
+                    <ScheduleTable group={'FINAL'} time={''} court={['1','2','3','1','2','3','1']} timing={['03 : 00 PM','03 : 00 PM','03 : 00 PM','03 :30 PM','03 : 30 PM','03 : 30 PM','04 : 00 PM',]} event={['OPEN 1','OPEN 2','OPEN 3','MIXED 1','MIXED 2','VETERAN','OPEN 4']} team1={'CORE'} team2={'FLOATING'}/>
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide6" className="btn btn-circle">❮</a>
                         <a href="#slide1" className="btn btn-circle">❯</a>
