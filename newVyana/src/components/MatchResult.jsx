@@ -8,7 +8,7 @@ function MatchResult() {
     return (
         <>
             <div className="text-6xl font-bold md:w-5/6 mx-auto mt-8 mb-3" id='resluts'>
-                <div className='text-6xl font-bold flex items-center justify-between'>
+                <div className='text-6xl font-bold flex items-center justify-between flex-wrap-reverse'>
                     MATCH RESULTS
                     <img className='w-1/3' src={sponsor} alt="" />
                 </div>
