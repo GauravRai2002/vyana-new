@@ -1,0 +1,19 @@
+.background{
+    background: linear-gradient(to top, #0d4cb1, #FA66C5);
+}
+
+.new{
+    top: 0;
+}
+
+.arrow-left{
+    bottom: 0rem;
+    transform: translateY(50%);
+    left: 10rem;
+}
+
+@media only screen and (max-width:1000px){
+    .arrow-left{
+        left:5rem;
+    }
+}
