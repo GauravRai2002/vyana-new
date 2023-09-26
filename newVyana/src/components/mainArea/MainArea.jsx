@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './mainArea.css'
-import { Route, Routes } from 'react-router-dom'
 import CurrentEvents from '../currentEvents/CurrentEvents'
 import Hero from '../hero/Hero'
 import LatestEvents from '../invertedEvents/LatestEvents'

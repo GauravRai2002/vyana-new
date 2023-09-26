@@ -5,7 +5,7 @@ function ContactForm() {
     return (
         <>
             <div className='lower-conter-right drop-shadow-2xl' data-aos="fade-up"
-                data-aos-duration="1000" data-aos-delay="400">
+                data-aos-duration="1000" data-aos-delay="100">
                 <div className='get-a-demo-border'>
                     <div className='get-a-demo-form'>
                         <p id='get-1'>Contact Us</p>

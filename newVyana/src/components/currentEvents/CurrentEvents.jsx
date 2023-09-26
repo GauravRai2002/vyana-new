@@ -3,7 +3,6 @@ import './currentEvent.css'
 import EventElement from '../eventElement/EventElement'
 import logo from '../../assets/ylfcricket23.png'
 import newLogo from '../../assets/new.png'
-import arrow  from '../../assets/arrow.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -21,7 +20,7 @@ function CurrentEvents() {
             <a className='' href="https://cricheroes.in/tournament/739660/YLF-T10-Cricket-2023/live-matches/1" target='_blank'><EventElement logo={logo}/></a> 
         </div>
 
-        <img className='absolute md:w-32 w-12 arrow cursor-pointer' src={arrow} alt="" />
+        {/* <Link to='/latestEvents'> <img className='absolute md:w-32 w-12 arrow cursor-pointer' src={arrow} alt="" /></Link> */}
     </div>
   )
 }
