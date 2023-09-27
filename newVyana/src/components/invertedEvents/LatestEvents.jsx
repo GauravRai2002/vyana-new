@@ -16,9 +16,9 @@ function LatestEvents() {
     <div data-aos="fade-left" data-aos-duration="2500" className='w-5/6 mx-auto rounded-l-full  background md:my-32 my-16 md:p-10 p-3 relative'>
         <div className='font-bold md:text-6xl text-xl text-center drop-shadow-lg text-white'>Our Latest Events</div>
         <div className='flex flex-wrap overflow-y-hidden h-24 md:mt-16 mt-2 items-center md:h-fit justify-center md:gap-32 gap-0 w-5/6 mx-auto'>
-            <EventElement logo={logo}/>
-            <EventElement logo={logo}/>
-            <EventElement logo={logo}/>
+           <Link to={'/event'}><EventElement logo={logo}/></Link>
+           <Link to={'/event'}><EventElement logo={logo}/></Link>
+           <Link to={'/event'}><EventElement logo={logo}/></Link>
         </div>
 
         <Link to='/latestEvents'><img className='absolute md:w-32 w-12 arrow-left cursor-pointer' src={arrow} alt="" /></Link>

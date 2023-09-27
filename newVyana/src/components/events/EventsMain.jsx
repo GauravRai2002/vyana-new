@@ -5,6 +5,10 @@ import rule2 from '../../assets/rule2.jpg'
 import rule3 from '../../assets/rule3.jpg'
 import rule4 from '../../assets/rule4.jpg'
 import YouTube from 'react-youtube';
+import Contact from '../contact/Contact'
+import Footer from '../footer/Footer'
+import result1 from '../../assets/result_1.jpg'
+import result2 from '../../assets/result_2.jpg'
 function EventsMain() {
     var rules = [rule1, rule2]
     var schedule = [rule3, rule4]
@@ -22,6 +26,8 @@ function EventsMain() {
       const handleOnReady = (event)=>{
         event.target.pauseVideo();
       }
+
+      var results = [result1,result2]
     return (
         <>
             <div className='px-6 md:px-0 main-area-events min-h-screen bg-cover bg-no-repeat bg-center pt-1'>
@@ -30,7 +36,11 @@ function EventsMain() {
 
                 <div className='rules-section md:w-5/6 mx-auto my-16'>
                     <div className='font-bold md:text-6xl text-2xl mx-auto md:w-5/6 my-10 drop-shadow-lg text-white'>Results </div>
-
+                    {
+                        results.map((result, id) => {
+                            return <img draggable='false' src={result} key={id} alt="rules" />
+                        })
+                    }
                 </div>
 
                 <div className='rules-section md:w-5/6 mx-auto my-16'>
@@ -54,7 +64,7 @@ function EventsMain() {
                     <div className='font-bold md:text-6xl text-2xl mx-auto md:w-5/6 my-10 drop-shadow-lg text-white'>Teams and Schedule </div>
                     {
                         schedule.map((rule, id) => {
-                            return <img src={rule} key={id} alt="rules" />
+                            return <img draggable='false' src={rule} key={id} alt="rules" />
                         })
                     }
                 </div>
@@ -65,13 +75,15 @@ function EventsMain() {
                     <div className='font-bold md:text-6xl text-2xl mx-auto md:w-5/6 my-10 drop-shadow-lg text-white'>Rules And Regulations </div>
                     {
                         rules.map((rule, id) => {
-                            return <img src={rule} key={id} alt="rules" />
+                            return <img draggable="false" src={rule} key={id} alt="rules" />
                         })
                     }
                 </div>
 
 
+            <Contact/>
             </div>
+            <Footer/>
         </>
     )
 }
