@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 function App() {
   const [allData, setAllData] = useState([])
   useEffect(()=>{
-    fetch('http://localhost:8000/events').then(res => res.json()).then(result =>{
+    fetch('https://vyana-sports-back-end.vercel.app/events').then(res => res.json()).then(result =>{
       setAllData(result)
     } )
   },[])

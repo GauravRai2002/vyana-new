@@ -36,7 +36,7 @@ function EventsMain({ allData }) {
         console.log(id)
         console.log('events main')
         try{
-            fetch(`http://localhost:8000/events/${id}`).then(res => res.json()).then(result => setData(result))
+            fetch(`https://vyana-sports-back-end.vercel.app/events/${id}`).then(res => res.json()).then(result => setData(result))
         }catch(err){
             setData({
                 'result':[],
