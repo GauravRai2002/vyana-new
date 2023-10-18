@@ -15,19 +15,19 @@ function EventsMain({ allData }) {
         width: '400',
         playerVars: {
             // https://developers.google.com/youtube/player_parameters
-            autoplay: 1,
+            autoplay: 0,
         },
     };
 
     const [data, setData] = useState({
-        'result':[],
-        'schedule':[],
-        'rules':[],
-        'videos':[]
+        'result': [],
+        'schedule': [],
+        'rules': [],
+        'videos': []
     })
 
     const handleOnReady = (event) => {
-        event.target.pauseVideo();
+        // event.target.pauseVideo();
     }
 
     useEffect(() => {
@@ -35,14 +35,14 @@ function EventsMain({ allData }) {
         const id = url.substring(url.lastIndexOf("/") + 1)
         console.log(id)
         console.log('events main')
-        try{
+        try {
             fetch(`https://vyana-sports-back-end.vercel.app/events/${id}`).then(res => res.json()).then(result => setData(result))
-        }catch(err){
+        } catch (err) {
             setData({
-                'result':[],
-                'schedule':[],
-                'rules':[],
-                'videos':[]
+                'result': [],
+                'schedule': [],
+                'rules': [],
+                'videos': []
             })
         }
 

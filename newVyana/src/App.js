@@ -4,6 +4,7 @@ import Navbar from "./components/navbar/Navbar";
 import EventExplorer from "./components/EventExplorer/EventExplorer";
 import EventsMain from "./components/events/EventsMain";
 import { useEffect, useState } from "react";
+import Store from "./components/store/Store";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<MainArea allData={allData}/>}/>
         <Route path="/latestEvents" element={<EventExplorer allData={allData}/>}/>
         <Route path="/event/*" element={<EventsMain allData={allData}/>}/>
+        {/* <Route path="/store/*" element={<Store/>}/> */}
       </Routes>
     </div>
   );
