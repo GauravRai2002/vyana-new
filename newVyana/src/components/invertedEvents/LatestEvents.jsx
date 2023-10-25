@@ -15,7 +15,7 @@ function LatestEvents({ data }) {
   return (
     <div id='events' data-aos="fade-up" data-aos-duration="2500" className='w-5/6 rounded-lg mx-auto background md:my-32 my-16 md:p-10 p-3 relative'>
         <div className='font-bold md:text-6xl text-xl text-center drop-shadow-lg text-white'>Our Events</div>
-        <div className='flex flex-wrap overflow-y-hidden md:mt-16 my-2 items-center md:h-fit justify-center md:gap-24 gap-0 mx-auto'>
+        <div className='flex flex-wrap overflow-y-hidden md:mt-16 my-2 items-center md:h-fit justify-center md:gap-24 mx-auto'>
            {/* <Link to={'/event'}><EventElement logo={logo}/></Link>
            
            <Link to={'/event'}><EventElement logo={logo}/></Link> */}
