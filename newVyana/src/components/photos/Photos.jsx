@@ -40,7 +40,7 @@ function Photos() {
     },[])
     return (
         <div className="photos-area-main pt-1">
-            <div className=' flex flex-wrap items-start justify-center gap-1 md:w-5/6 m-auto my-16 '>
+            <div className=' flex flex-wrap items-start justify-center gap-1 mx-1 my-16 '>
                 {isLoaded?
                     photos.map((photo, key) => {
                         return <Photo key={key} url={photo}/>
