@@ -5,10 +5,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SingleTestimonial from '../singleTestimonial/SingleTestimonial';
 import one from '../../assets/img1.jpeg'
-import two from '../../assets/img2.jpeg'
+import two from '../../assets/pranav.jpg'
 import three from '../../assets/img3.jpg'
 import four from '../../assets/img4.jpg'
-import five from '../../assets/img5.jpg'
+import five from '../../assets/harsh.jpg'
 
 function Testimonials({heading}) {
     var width = window.innerWidth

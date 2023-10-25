@@ -7,6 +7,7 @@ import Footer from '../footer/Footer'
 import Testimonials from '../testimonials/Testimonials'
 import Services from '../services/Services'
 import Contact from '../contact/Contact'
+import ClientTestimonial from '../testimonials/ClientTestimonial'
 
 
 function MainArea({allData}) {
@@ -22,7 +23,7 @@ function MainArea({allData}) {
       <LatestEvents data={allData} data-aos="fade-left" />
       <Testimonials heading={'Testimonials and Reviews'}/>
       <Services/>
-      <Testimonials heading={'Our Clients'}/>
+      <ClientTestimonial heading={'Our Clients'}/>
       <Contact/>
       <Footer/>
     </div>

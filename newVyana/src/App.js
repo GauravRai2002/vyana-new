@@ -5,6 +5,8 @@ import EventExplorer from "./components/EventExplorer/EventExplorer";
 import EventsMain from "./components/events/EventsMain";
 import { useEffect, useState } from "react";
 import Store from "./components/store/Store";
+import Photos from "./components/photos/Photos";
+import About from "./components/about/About";
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
         <Route path="/" element={<MainArea allData={allData}/>}/>
         <Route path="/latestEvents" element={<EventExplorer allData={allData}/>}/>
         <Route path="/event/*" element={<EventsMain allData={allData}/>}/>
+        <Route path="/photos/*" element={<Photos/>}/>
+        <Route path="/about" element={<About/>}/>
         {/* <Route path="/store/*" element={<Store/>}/> */}
       </Routes>
     </div>
