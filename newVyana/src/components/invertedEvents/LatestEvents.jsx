@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './latestEvents.css'
 import EventElement from '../eventElement/EventElement'
-import logo from '../../assets/ylfcricket23.png'
 import arrow  from '../../assets/arrow.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';

@@ -1,6 +1,5 @@
 import React from 'react'
 import './eventExplorer.css'
-import ylf from '../../assets/ylfcricket23.png'
 import EventElement from '../eventElement/EventElement'
 import Contact from '../contact/Contact'
 import Footer from '../footer/Footer'

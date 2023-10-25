@@ -1,6 +1,5 @@
 import React from 'react'
 import './singleTestimonial.css'
-import logo from '../../assets/ylfcricket23.png'
 function SingleTestimonial({icon,review,name,designation}) {
     return (
         <>
