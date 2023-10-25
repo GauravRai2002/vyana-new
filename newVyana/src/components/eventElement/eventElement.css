@@ -1,6 +1,25 @@
 .custom-background{
-    background-image: url('../../assets/logo_back.png');
+    /* background-image: url('../../assets/background3.png'); */
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    border: 12px solid rgb(163, 162, 162);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+@media only screen and (max-width:1300px){
+    .custom-background{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media only screen and (max-width:800px){
+    .custom-background{
+        width: 80px;
+        height: 80px;
+    }
 }

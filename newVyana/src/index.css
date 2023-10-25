@@ -6,6 +6,8 @@
 * {
     font-family: 'Oswald', sans-serif;
     /* font-family: 'Roboto Mono', monospace; */
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
 }
 
 /* #35009D -- Blue

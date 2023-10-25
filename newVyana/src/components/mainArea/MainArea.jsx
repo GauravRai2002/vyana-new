@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './mainArea.css'
-import CurrentEvents from '../currentEvents/CurrentEvents'
 import Hero from '../hero/Hero'
 import LatestEvents from '../invertedEvents/LatestEvents'
 import Footer from '../footer/Footer'
@@ -18,8 +17,7 @@ function MainArea({allData}) {
 
   return (
     <div className='main-area-main min-h-screen bg-cover bg-no-repeat bg-center pt-1'>
-      {/* <Hero/> */}
-      <CurrentEvents data={allData}/>
+      <Hero/>
       <LatestEvents data={allData} data-aos="fade-left" />
       <Testimonials heading={'Testimonials and Reviews'}/>
       <Services/>
