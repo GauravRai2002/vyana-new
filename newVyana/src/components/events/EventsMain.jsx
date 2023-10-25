@@ -9,6 +9,7 @@ import Contact from '../contact/Contact'
 import Footer from '../footer/Footer'
 import result1 from '../../assets/result_1.jpg'
 import result2 from '../../assets/result_2.jpg'
+import { Link } from 'react-router-dom';
 function EventsMain({ allData }) {
     const opts = {
         height: '200',
@@ -53,24 +54,29 @@ function EventsMain({ allData }) {
             <div className='px-6 md:px-0 main-area-events min-h-screen bg-cover bg-no-repeat bg-center pt-1'>
 
 
+                <div className='rules-section w-[95%] md:w-5/6 mx-auto my-16'>
+                    <div className='flex flex-wrap items-center justify-center gap-10 md:justify-between md:gap-8 font-bold md:text-6xl text-2xl mx-auto my-10 drop-shadow-lg text-white'>Don't miss out on the action -
+                    
+                    <Link to={`/photos/${data.e_id}`}> <button className='btn btn-outline w-64 glass md:mr-40'>See all photos </button></Link>
+
+                     </div>
+
+                </div>
 
 
-                {data.result.length>0?<div className='rules-section w-[95%] md:w-5/6 mx-auto my-16'>
-                    <div className='font-bold md:text-6xl text-2xl mx-auto md:w-5/6 my-10 drop-shadow-lg text-white'>Results </div>
+                {data.result.length > 0 ? <div className='rules-section w-[95%] md:w-5/6 mx-auto my-16'>
+                    <div className='font-bold md:text-6xl text-2xl mx-auto my-10 drop-shadow-lg text-white'>Results </div>
                     {
                         data.result.map((result, id) => {
                             return <img draggable='false' src={result.url} key={id} alt="rules" />
                         })
                     }
-                </div>:<></>}
+                </div> : <></>}
 
-                <div className='rules-section w-[95%] md:w-5/6 mx-auto my-16'>
-                    <div className='font-bold md:text-6xl text-2xl mx-auto md:w-5/6 my-10 drop-shadow-lg text-white'>Photos </div>
 
-                </div>
 
-                {data.videos.length>0?<div className='rules-section w-[95%] md:w-5/6 mx-auto my-16'>
-                    <div className='font-bold md:text-6xl text-2xl mx-auto md:w-5/6 my-10 drop-shadow-lg text-white'>Videos </div>
+                {data.videos.length > 0 ? <div className='rules-section w-[95%] md:w-5/6 mx-auto my-16'>
+                    <div className='font-bold md:text-6xl text-2xl mx-auto my-10 drop-shadow-lg text-white'>Videos </div>
                     <div className='flex flex-wrap gap-16 items-center justify-center'>
                         {
                             data.videos.map((videos, id) => {
@@ -78,28 +84,28 @@ function EventsMain({ allData }) {
                             })
                         }
                     </div>
-                </div>:<></>}
+                </div> : <></>}
 
 
-                {data.schedule.length>0?<div className='rules-section w-[95%] md:w-5/6 mx-auto my-16'>
-                    <div className='font-bold md:text-6xl text-2xl mx-auto md:w-5/6 my-10 drop-shadow-lg text-white'>Teams and Schedule </div>
+                {data.schedule.length > 0 ? <div className='rules-section w-[95%] md:w-5/6 mx-auto my-16'>
+                    <div className='font-bold md:text-6xl text-2xl mx-auto my-10 drop-shadow-lg text-white'>Teams and Schedule </div>
                     {
                         data.schedule.map((rule, id) => {
                             return <img draggable='false' src={rule.url} key={id} alt="rules" />
                         })
                     }
-                </div>:<></>}
+                </div> : <></>}
 
 
 
-                {data.rules.length>0?<div className='rules-section w-[95%] md:w-5/6 mx-auto my-16'>
-                    <div className='font-bold md:text-6xl text-2xl mx-auto md:w-5/6 my-10 drop-shadow-lg text-white'>Rules And Regulations </div>
+                {data.rules.length > 0 ? <div className='rules-section w-[95%] md:w-5/6 mx-auto my-16'>
+                    <div className='font-bold md:text-6xl text-2xl mx-auto my-10 drop-shadow-lg text-white'>Rules And Regulations </div>
                     {
                         data.rules.map((rule, id) => {
                             return <img draggable="false" src={rule.url} key={id} alt="rules" />
                         })
                     }
-                </div>:<></>}
+                </div> : <></>}
 
 
                 <Contact />

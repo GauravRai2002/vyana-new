@@ -25,7 +25,7 @@ function App() {
         <Route path="/latestEvents" element={<EventExplorer allData={allData}/>}/>
         <Route path="/event/*" element={<EventsMain allData={allData}/>}/>
         <Route path="/photos/*" element={<Photos/>}/>
-        <Route path="/about" element={<About/>}/>
+        {/* <Route path="/about" element={<About/>}/> */}
         {/* <Route path="/store/*" element={<Store/>}/> */}
       </Routes>
     </div>

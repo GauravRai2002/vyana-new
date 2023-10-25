@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import logo from '../../assets/logo.png'
 import './hero.css'
-import video from '../../assets/VYANA.mp4'
+import sample from '../../assets/sample.png'
 function Hero() {
   return (
-    // <div className='md:px-32 md:py-16 flex items-center justify-center w-5/6 mx-auto my-10'>
-    //     <img className='md:w-2/5 w-5/6' src={logo} alt="" />
-    // </div>
     <>
-      <video src={video} className='video' autoPlay muted loop></video>
+      {/* <video src={video} className='video' controlsList="nodownload noplaybackrate" disablePictureInPicture controls loop></video> */}
+      <div className='flex flex-wrap items-center justify-start custom-back md:px-32'>
+        <div className='w-1/3 text-white text-3xl'>Lorem ipsum dolor sit amet.</div>
+      </div>
     </>
   )
 }

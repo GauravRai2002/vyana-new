@@ -18,7 +18,7 @@ function MainArea({allData}) {
 
   return (
     <div className='main-area-main min-h-screen bg-cover bg-no-repeat bg-center pt-1'>
-      <Hero/>
+      {/* <Hero/> */}
       <CurrentEvents data={allData}/>
       <LatestEvents data={allData} data-aos="fade-left" />
       <Testimonials heading={'Testimonials and Reviews'}/>
