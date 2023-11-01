@@ -7,6 +7,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 function LatestEvents({ data }) {
+  // data.reverse()
   console.log(data)
   useEffect(() => {
     AOS.init();
@@ -20,9 +21,8 @@ function LatestEvents({ data }) {
            
            <Link to={'/event'}><EventElement logo={logo}/></Link> */}
           {
-            
             data.map((d,i)=>{
-              if (i<3 ) return d.timing == 'PREV'? <Link key={i} to={`/event/${d.e_id}`}><EventElement data={d} logo={d.e_logo}/></Link>:<></>
+              if (i<3 ) return <Link key={i} to={`/event/${d.e_id}`}><EventElement data={d} logo={d.e_logo}/></Link>
               i++
             })
           }

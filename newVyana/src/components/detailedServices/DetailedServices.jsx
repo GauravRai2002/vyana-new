@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -17,23 +17,30 @@ function DetailedServices() {
         autoplay: true,
         arrows: false,
     };
-
+    const topContainer = useRef();
+    useEffect(() => {
+        // To make sure page starts from the top
+        topContainer.current.scrollIntoView({ block: "end", behavior: 'smooth' });
+    }, []);
     return (
         <div className='services-background pt-0.5'>
-            <Slider className='md:my-16 my-6' {...settings}>
-                {
-
-
-                }
-            </Slider>
+<div ref={topContainer} />
 
             {/* <video src={video} className='video' controlsList="nodownload noplaybackrate" disablePictureInPicture controls loop></video> */}
-            <div className="card flex-wrap card-side shadow-xl md:w-5/6 w-full mx-1 md:mx-auto my-16">
-                <figure className='flex items-center justify-center w-[98vw] md:w-auto' ><img draggable='false' className='md:w-[40vw] w-[95vw] rounded-xl mx-auto' src={background} alt="Movie" /></figure>
-                <div className="p-6 flex flex-col gap-4 md:w-1/2 md:text-left text-justify">
-                    <h1 className="block card-title text-3xl text-white">Mr. Abhenav Khettry</h1>
-                    <span className='font-light text-xs w-fit text-white'>Founder - Vyana Sports</span>
-                    <p className='block text-white'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore velit mollitia soluta rem rerum cupiditate reprehenderit eveniet odio nihil quos hic autem pariatur fugiat, optio atque ipsum vero commodi veritatis dolorem voluptas voluptatibus, quod expedita! A ab cumque assumenda error earum, vitae molestias? Odio deserunt aspernatur maxime minus quasi quos accusamus soluta quia neque fugiat sunt laborum perferendis molestias dolorem consequuntur cupiditate porro ipsum expedita, officiis in magnam reprehenderit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quos accusamus libero facilis assumenda maiores. Quisquam excepturi molestias illo! Voluptates, totam architecto. Blanditiis, id? Velit nulla dolore vel eius fugiat dolorem ipsam obcaecati! Quisquam voluptatum, nam fugiat optio eius iste architecto. Accusantium provident cumque quae assumenda ipsa possimus dolorum ea, neque suscipit doloribus fugit atque consequuntur maiores alias, ducimus itaque a architecto illo natus, sunt minima maxime expedita? Repellat. </p>
+            <div className="card flex-wrap card-side shadow-xl md:w-5/6 w-full px-1 md:mx-auto my-16 relative">
+                <div className='w-full'>
+                    <Slider className='rounded-lg'  {...settings}>
+                        <img className='brightness-50 rounded-lg  md:h-[95vh]' src='https://res.cloudinary.com/dy4rzochf/image/upload/v1698828974/Services/Auction/CRI_1075_ybm1ow.jpg' alt="" />
+                        <img className='brightness-50 rounded-lg md:h-[95vh]' src='https://res.cloudinary.com/dy4rzochf/image/upload/v1698828974/Services/Auction/CRI_1172_mdkfnj.jpg' alt="" />
+                        <img className='brightness-50 rounded-lg md:h-[95vh]' src='https://res.cloudinary.com/dy4rzochf/image/upload/v1698828974/Services/Auction/CRI_1144_lgeprt.jpg' alt="" />
+                        <img className='brightness-50 rounded-lg md:h-[95vh]' src='https://res.cloudinary.com/dy4rzochf/image/upload/v1698828977/Services/Auction/CRI_1104_xxtseq.jpg' alt="" />
+                        <img className='brightness-50 rounded-lg md:h-[95vh]' src='https://res.cloudinary.com/dy4rzochf/image/upload/v1698828977/Services/Auction/CRI_1066_ourxxi.jpg' alt="" />
+                        <img className='brightness-50 rounded-lg md:h-[95vh]' src='https://res.cloudinary.com/dy4rzochf/image/upload/v1698828977/Services/Auction/CRI_1045_nrzoht.jpg' alt="" />
+                    </Slider>
+                </div>
+                <div className="py-1 px-4 md:p-6 flex flex-col gap-4 md:gap-10 w-full md:text-left text-justify absolute inset-0 items-center justify-center">
+                    <h1 className="block card-title md:text-3xl text-white">Player Auctions</h1>
+                    <p className='block text-white text-xs md:text-lg text-center md:px-20'>Streamline the player auction process with our service. We provide a transparent, efficient platform for buying and selling talent in the sports world. From individual athletes to teams, we ensure a seamless and organized process, connecting talent with opportunity. Elevate your player auctions today.</p>
 
                 </div>
             </div>

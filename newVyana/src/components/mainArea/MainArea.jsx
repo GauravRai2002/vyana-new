@@ -12,6 +12,8 @@ import photo from '../../assets/harsh.jpg'
 
 function MainArea({allData}) {
 
+  allData.reverse()
+
   
 
   const photos = [photo,photo,photo]

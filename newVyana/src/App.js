@@ -8,16 +8,24 @@ import Store from "./components/store/Store";
 import Photos from "./components/photos/Photos";
 import About from "./components/about/About";
 import DetailedServices from "./components/detailedServices/DetailedServices";
+import DetailedPlanning from "./components/detailedServices/DetailedPlanning";
+import DetailedJDesign from "./components/detailedServices/DetailedJDesign";
+import DetailedTDesign from "./components/detailedServices/DetailedTDesign";
+import DetailedLiveStream from "./components/detailedServices/DetailedLiveStream";
+import DetailedFaceRecognition from "./components/detailedServices/DetailedFaceRecognition";
+import DetailedLiveScoring from "./components/detailedServices/DetailedLiveScoring";
 
 
 function App() {
   const [allData, setAllData] = useState([])
   useEffect(()=>{
     fetch('https://vyana-sports-back-end.vercel.app/events').then(res => res.json()).then(result =>{
+      result.reverse()
       setAllData(result)
     } )
   },[])
-  console.log(allData)
+  // console.log(allData)
+
   return (
     <div className="App">
       <Navbar/>
@@ -26,8 +34,14 @@ function App() {
         <Route path="/latestEvents" element={<EventExplorer allData={allData}/>}/>
         <Route path="/event/*" element={<EventsMain allData={allData}/>}/>
         <Route path="/photos/*" element={<Photos/>}/>
-        {/* <Route path="/about" element={<About/>}/> */}
-        {/* <Route path="/services" element={<DetailedServices/>}/> */}
+        <Route path="/about" element={<About/>}/>
+        <Route path="/auction" element={<DetailedServices/>}/>
+        <Route path="/planning" element={<DetailedPlanning/>}/>
+        <Route path="/j_design" element={<DetailedJDesign/>}/>
+        <Route path="/t_design" element={<DetailedTDesign/>}/>
+        <Route path="/live_streaming" element={<DetailedLiveStream/>}/>
+        <Route path="/face_recognition" element={<DetailedFaceRecognition/>}/>
+        <Route path="/live_scoring" element={<DetailedLiveScoring/>}/>
         {/* <Route path="/store/*" element={<Store/>}/> */}
       </Routes>
     </div>
