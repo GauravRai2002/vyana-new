@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import Store from "./components/store/Store";
 import Photos from "./components/photos/Photos";
 import About from "./components/about/About";
+import DetailedServices from "./components/detailedServices/DetailedServices";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/event/*" element={<EventsMain allData={allData}/>}/>
         <Route path="/photos/*" element={<Photos/>}/>
         {/* <Route path="/about" element={<About/>}/> */}
+        {/* <Route path="/services" element={<DetailedServices/>}/> */}
         {/* <Route path="/store/*" element={<Store/>}/> */}
       </Routes>
     </div>

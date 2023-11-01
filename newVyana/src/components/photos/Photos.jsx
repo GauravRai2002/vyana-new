@@ -16,9 +16,7 @@ import Photo from './Photo'
 
 function Photos() {
     const photoUrl = `https://d1nggc2z6cn784.cloudfront.net/ympl/02daf866-ff56-46de-a16a-a65c2c2dd10e.jpg`
-    const handleDownloadButton = (key)=>{
-        console.log(key)
-    }
+
     const [photos,setPhotos] = useState([])
     const [isLoaded,setIsloaded] = useState(false)
 
@@ -29,6 +27,7 @@ function Photos() {
             fetch(`https://vyana-view-face-api.vercel.app/viewImages/${id}`).then(data=>data.json()).then(res=>{
                 try{
                     setPhotos([...res.response])
+                    console.log([...res.response])
                     setIsloaded(true)
                 }catch(e){
                     console.log(e)

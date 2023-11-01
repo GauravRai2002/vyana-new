@@ -11,7 +11,7 @@ import five from '../../assets/harsh.jpg'
 
 function Testimonials({heading}) {
     var width = window.innerWidth
-    var settings =width>1000?{
+    var settings =width>1050?{
         dots: false,
         infinite: true,
         speed: 500,

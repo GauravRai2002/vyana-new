@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 
 function Photo({url}) {
 
-    const [photoUrl, setPhotoUrl] = useState('https://d1nggc2z6cn784.cloudfront.net/')
+    // const [photoUrl, setPhotoUrl] = useState('https://d1nggc2z6cn784.cloudfront.net/')
+    const [photoUrl, setPhotoUrl] = useState('https://d1t6kumqe5krrs.cloudfront.net/')
     const [display,setDisplay] = useState('hidden')
     const handleMouseOver = ()=>{
         setDisplay('block')
