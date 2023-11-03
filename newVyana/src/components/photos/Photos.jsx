@@ -70,7 +70,7 @@ function Photos() {
                     }) : <></>
                 }
             </div>
-            <div ref={carouselRef} className='hidden w-full mx-auto h-screen items-center justify-center fixed z-10 top-0 bg-[rgba(0,0,0,0.8)] p-1'>
+            <div ref={carouselRef} className='hidden w-full mx-auto h-screen items-center justify-center fixed z-10 top-0 md:bg-[rgba(0,0,0,0.8)] bg-black p-1'>
                 <div onClick={() => {
                     document.body.style.overflow = 'auto'
                     carouselRef.current.classList.remove('flex')
