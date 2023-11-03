@@ -25,7 +25,7 @@ function MainArea({allData}) {
       <Testimonials heading={'Testimonials and Reviews'}/>
       <Services/>
       <ClientTestimonial heading={'Our Clients'}/>
-      <Contact/>
+      {/* <Contact/> */}
       <Footer/>
     </div>
   )

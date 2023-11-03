@@ -8,6 +8,14 @@
     /* font-family: 'Roboto Mono', monospace; */
     scroll-behavior: smooth;
     scroll-padding-top: 50px;
+    -moz-user-select: none;
+    /* firefox */
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE*/
+    user-select: none;
+    /* Standard syntax */
 }
 
 /* #35009D -- Blue

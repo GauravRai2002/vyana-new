@@ -108,7 +108,7 @@ function EventsMain({ allData }) {
                 </div> : <></>}
 
 
-                <Contact />
+                {/* <Contact /> */}
             </div>
             <Footer />
         </>
