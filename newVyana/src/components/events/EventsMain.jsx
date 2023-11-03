@@ -64,7 +64,7 @@ function EventsMain({ allData }) {
     return (
         <>
         <div ref={topContainer} />
-            <div className='px-6 md:px-0 main-area-events min-h-screen bg-cover bg-no-repeat bg-center py-1'>
+            <div className='px-0.5 md:px-0 main-area-events min-h-screen bg-cover bg-no-repeat bg-center py-1'>
 
 
                 {!showPhotos ? <div className='rules-section w-[95%] md:w-5/6 mx-auto my-16'>
