@@ -54,7 +54,7 @@ function Photos() {
     }
     return (<>
         <div className="photos-area-main pt-1 relative">
-            <div className=' flex flex-wrap items-start justify-center gap-1 mx-1 my-16 '>
+            <div className=' flex flex-wrap items-start justify-center gap-0.5 mx-1 my-16 '>
                 {isLoaded ?
                     photos.map((photo, id) => {
                         var localIndex = ind
