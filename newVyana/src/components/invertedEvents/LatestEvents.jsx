@@ -8,6 +8,8 @@ import 'aos/dist/aos.css';
 
 function LatestEvents({ data }) {
   // data.reverse()
+  const width = window.innerWidth
+  const limit = width>1000?3:2
   console.log(data)
   useEffect(() => {
     AOS.init();
@@ -22,7 +24,7 @@ function LatestEvents({ data }) {
            <Link to={'/event'}><EventElement logo={logo}/></Link> */}
           {
             data.map((d,i)=>{
-              if (i<3 ) return <Link key={i} to={`/event/${d.e_id}`}><EventElement data={d} logo={d.e_logo}/></Link>
+              if (i<limit ) return <Link key={i} to={`/event/${d.e_id}`}><EventElement data={d} logo={d.e_logo}/></Link>
               i++
             })
           }
