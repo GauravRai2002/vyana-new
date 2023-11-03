@@ -45,13 +45,6 @@ function DetailedJDesign() {
                 </div>
             </div>
 
-
-
-
-
-            <Contact />
-            <Footer />
-
         </div>
     )
 }

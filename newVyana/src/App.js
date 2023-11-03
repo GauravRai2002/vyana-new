@@ -14,6 +14,8 @@ import DetailedTDesign from "./components/detailedServices/DetailedTDesign";
 import DetailedLiveStream from "./components/detailedServices/DetailedLiveStream";
 import DetailedFaceRecognition from "./components/detailedServices/DetailedFaceRecognition";
 import DetailedLiveScoring from "./components/detailedServices/DetailedLiveScoring";
+import Contact from "./components/contact/Contact";
+import Footer from './components/footer/Footer';
 
 
 function App() {
@@ -42,8 +44,10 @@ function App() {
         <Route path="/live_streaming" element={<DetailedLiveStream/>}/>
         <Route path="/face_recognition" element={<DetailedFaceRecognition/>}/>
         <Route path="/live_scoring" element={<DetailedLiveScoring/>}/>
+        <Route path="/contact" element={<Contact/>}/>
         {/* <Route path="/store/*" element={<Store/>}/> */}
       </Routes>
+      <Footer/>
     </div>
   );
 }

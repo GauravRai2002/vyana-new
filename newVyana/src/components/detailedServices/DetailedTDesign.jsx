@@ -48,13 +48,6 @@ function DetailedTDesign() {
                 </div>
             </div>
 
-
-
-
-
-            <Contact />
-            <Footer />
-
         </div>
     </>
     )

@@ -1,3 +1,4 @@
 .main-area-events{
-    background-image: url('../../assets/back.png') ;
+    /* background: whitesmoke ; */
+    background: url('../../assets/back.svg');
 }

@@ -4,7 +4,7 @@ import logo from '../../assets/logo.png'
 function Footer() {
     return (
         <>
-            <footer className="footer p-10 bg-primary text-primary-content">
+            <footer className="footer p-10 bg-indigo-950 text-primary-content">
                 <aside>
                     <img className='w-32' src={logo} alt="" />
                     <p>Vyana Sports<br />Sports Management, Simplified</p>

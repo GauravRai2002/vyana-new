@@ -42,13 +42,6 @@ function DetailedLiveStream() {
                 </div>
             </div>
 
-
-
-
-
-            <Contact />
-            <Footer />
-
         </div>
     )
 }

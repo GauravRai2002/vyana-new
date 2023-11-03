@@ -1,4 +1,4 @@
-import React, { useEffect, useParams, useState } from 'react'
+import React, { useEffect, useParams, useRef, useState } from 'react'
 import './eventsMain.css'
 import rule1 from '../../assets/rule1.jpg'
 import rule2 from '../../assets/rule2.jpg'
@@ -10,6 +10,7 @@ import Footer from '../footer/Footer'
 import result1 from '../../assets/result_1.jpg'
 import result2 from '../../assets/result_2.jpg'
 import { Link } from 'react-router-dom';
+import Photos from '../photos/Photos'
 function EventsMain({ allData }) {
     const opts = {
         height: '200',
@@ -19,6 +20,8 @@ function EventsMain({ allData }) {
             autoplay: 0,
         },
     };
+
+    const [showPhotos, setShowPhotos] = useState(false)
 
     const [data, setData] = useState({
         'result': [],
@@ -30,14 +33,21 @@ function EventsMain({ allData }) {
     const handleOnReady = (event) => {
         // event.target.pauseVideo();
     }
-
+    const topContainer = useRef()
     useEffect(() => {
+        topContainer.current.scrollIntoView({ block: "end", behavior: 'smooth' });
         const url = window.location.href
         const id = url.substring(url.lastIndexOf("/") + 1)
         console.log(id)
         console.log('events main')
         try {
-            fetch(`https://vyana-sports-back-end.vercel.app/events/${id}`).then(res => res.json()).then(result => setData(result))
+            fetch(`https://vyana-sports-back-end.vercel.app/events/${id}`).then(res => res.json()).then(result => {
+                setData(result)
+                if(result.result.length==0 && result.videos.length==0  && result.schedule.length==0 && result.rules.length==0){
+                    setShowPhotos(true)
+                }
+            })
+
         } catch (err) {
             setData({
                 'result': [],
@@ -45,23 +55,26 @@ function EventsMain({ allData }) {
                 'rules': [],
                 'videos': []
             })
+
+
         }
 
     }, [])
 
     return (
         <>
-            <div className='px-6 md:px-0 main-area-events min-h-screen bg-cover bg-no-repeat bg-center pt-1'>
+        <div ref={topContainer} />
+            <div className='px-6 md:px-0 main-area-events min-h-screen bg-cover bg-no-repeat bg-center py-1'>
 
 
-                <div className='rules-section w-[95%] md:w-5/6 mx-auto my-16'>
+                {!showPhotos ? <div className='rules-section w-[95%] md:w-5/6 mx-auto my-16'>
                     <div className='flex flex-wrap items-center justify-center gap-10 md:justify-between md:gap-8 font-bold md:text-6xl text-2xl mx-auto my-10 drop-shadow-lg text-white'>Don't miss out on the action -
-                    
-                    <Link to={`/photos/${data.e_id}`}> <button className='btn btn-outline w-64 glass md:mr-40'>See all photos </button></Link>
 
-                     </div>
+                        <Link to={`/photos/${data.e_id}`}> <button className='btn btn-primary w-64 md:mr-40'>See all photos </button></Link>
 
-                </div>
+                    </div>
+
+                </div> : <Photos />}
 
 
                 {data.result.length > 0 ? <div className='rules-section w-[95%] md:w-5/6 mx-auto my-16'>
@@ -106,11 +119,7 @@ function EventsMain({ allData }) {
                         })
                     }
                 </div> : <></>}
-
-
-                {/* <Contact /> */}
             </div>
-            <Footer />
         </>
     )
 }

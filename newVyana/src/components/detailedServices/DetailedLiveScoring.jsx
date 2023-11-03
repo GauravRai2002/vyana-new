@@ -42,14 +42,6 @@ function DetailedLiveScoring() {
 
                 </div>
             </div>
-
-
-
-
-
-            <Contact />
-            <Footer />
-
         </div>
     )
 }

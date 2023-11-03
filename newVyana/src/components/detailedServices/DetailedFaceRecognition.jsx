@@ -39,14 +39,6 @@ function DetailedFaceRecognition() {
 
                 </div>
             </div>
-
-
-
-
-
-            <Contact />
-            <Footer />
-
         </div>
     )
 }

@@ -12,7 +12,7 @@ function EventExplorer({ allData }) {
     topContainer.current.scrollIntoView({ block: "end", behavior: 'smooth' });
   },[])
   return (
-    <div className='main-area-events min-h-screen bg-cover bg-no-repeat bg-center pt-1'>
+    <div className='main-area-events min-h-screen bg-cover bg-no-repeat bg-center py-1'>
       <div ref={topContainer} />
       <div className='font-bold md:text-6xl text-2xl mx-auto w-[95%] md:w-5/6 my-10 drop-shadow-lg text-white'>Latest Events</div>
       <div className='flex w-full md:w-5/6 mx-auto p-3 flex-wrap gap-3 md:gap-20 items-center justify-center my-6'>
@@ -21,8 +21,6 @@ function EventExplorer({ allData }) {
             return <EventElement data={data} key={id} logo={data.e_logo} />
           })}
       </div>
-      {/* <Contact /> */}
-      <Footer />
     </div>
 
   )

@@ -39,14 +39,6 @@ function DetailedPlanning() {
 
                 </div>
             </div>
-
-
-
-
-
-            <Contact />
-            <Footer />
-
         </div>
     )
 }

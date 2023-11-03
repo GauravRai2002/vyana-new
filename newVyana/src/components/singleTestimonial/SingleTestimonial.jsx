@@ -3,7 +3,7 @@ import './singleTestimonial.css'
 function SingleTestimonial({icon,review,name,designation}) {
     return (
         <>
-            <div className="card card-side glass width shadow-xl h-fit">
+            <div className="card glass card-side width shadow-xl h-fit">
                 <div className="avatar flex items-start justify-center m-3">
                     <div className="md:w-24 w-16  rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img className='aspect-square' src={icon} />

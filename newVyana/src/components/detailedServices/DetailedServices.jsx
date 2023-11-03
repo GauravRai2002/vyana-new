@@ -45,13 +45,6 @@ function DetailedServices() {
                 </div>
             </div>
 
-
-
-
-
-            <Contact />
-            <Footer />
-
         </div>
     )
 }
