@@ -27,7 +27,7 @@ function DetailedTDesign() {
 
     return (<>
         <div ref={topContainer} />
-        <div className='services-background pt-0.5'>
+        <div className='services-background py-0.5'>
 
 
             {/* <video src={video} className='video' controlsList="nodownload noplaybackrate" disablePictureInPicture controls loop></video> */}

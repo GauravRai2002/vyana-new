@@ -23,7 +23,7 @@ function DetailedLiveStream() {
         topContainer.current.scrollIntoView({ block: "end", behavior: 'smooth' });
     }, []);
     return (
-        <div className='services-background pt-0.5'>
+        <div className='services-background py-0.5'>
 <div ref={topContainer} />
 
             {/* <video src={video} className='video' controlsList="nodownload noplaybackrate" disablePictureInPicture controls loop></video> */}
