@@ -60,7 +60,6 @@ function Photos() {
                         var localIndex = ind
                         ind++
                         return <div key={id} onClick={() => {
-                            document.body.style.overflow = 'hidden'
                             carouselRef.current.classList.remove('hidden')
                             carouselRef.current.classList.add('flex')
                             setIndex(localIndex)
@@ -72,7 +71,6 @@ function Photos() {
             </div>
             <div ref={carouselRef} className='hidden w-full mx-auto h-screen items-center justify-center fixed z-10 top-0 md:bg-[rgba(0,0,0,0.8)] bg-black p-1'>
                 <div onClick={() => {
-                    document.body.style.overflow = 'auto'
                     carouselRef.current.classList.remove('flex')
                     carouselRef.current.classList.add('hidden')
                 }} className='absolute top-5 right-1 md:right-10 cursor-pointer'>
