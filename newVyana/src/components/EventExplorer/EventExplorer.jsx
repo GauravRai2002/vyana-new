@@ -6,7 +6,6 @@ import Footer from '../footer/Footer'
 import { Link } from 'react-router-dom'
 
 function EventExplorer({ allData }) {
-  console.log(allData)
   const topContainer = useRef()
   useEffect(()=>{
     topContainer.current.scrollIntoView({ block: "end", behavior: 'smooth' });

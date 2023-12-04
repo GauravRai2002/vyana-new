@@ -22,7 +22,7 @@ function App() {
   const [allData, setAllData] = useState([])
   useEffect(()=>{
     fetch('https://vyana-sports-back-end.vercel.app/events').then(res => res.json()).then(result =>{
-      result.reverse()
+      //result.reverse()
       setAllData(result)
     } )
   },[])
