@@ -6,13 +6,13 @@ import arrow  from '../../assets/arrow.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-function LatestEvents({ data }) {
+function LatestEvents({ allData }) {
   // data.reverse()
   const width = window.innerWidth
   const limit = width>1000?3:2
 
 
-  console.log(data)
+  console.log(allData)
   useEffect(() => {
     AOS.init();
   }, [])
@@ -21,9 +21,9 @@ function LatestEvents({ data }) {
         <div className='font-bold md:text-6xl text-xl text-center drop-shadow-lg text-white'>Our Events</div>
         <div className='flex flex-wrap overflow-y-hidden md:mt-16 my-2 items-center md:h-fit justify-center md:gap-24 mx-auto'>
           {
-            data.length>0?<><Link key={0} to={`/event/${data[0].e_id}`}><EventElement data={data[0]} logo={data[0].e_logo}/></Link>
-            <Link key={1} to={`/event/${data[1].e_id}`}><EventElement data={data[1]} logo={data[1].e_logo}/></Link>
-            <Link key={2} to={`/event/${data[2].e_id}`}><EventElement data={data[2]} logo={data[2].e_logo}/></Link></>:<></>
+            allData.length>0?<><Link key={0} to={`/event/${allData[0].e_id}`}><EventElement data={allData[0]} logo={allData[0].e_logo}/></Link>
+            <Link key={1} to={`/event/${allData[1].e_id}`}><EventElement data={allData[1]} logo={allData[1].e_logo}/></Link>
+            <Link key={2} to={`/event/${allData[2].e_id}`}><EventElement data={allData[2]} logo={allData[2].e_logo}/></Link></>:<></>
           }
         
         </div>

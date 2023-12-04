@@ -12,7 +12,6 @@ import photo from '../../assets/harsh.jpg'
 
 function MainArea({allData}) {
 
-  allData.reverse()
 
   
 
@@ -21,7 +20,7 @@ function MainArea({allData}) {
   return (
     <div className='main-area-main min-h-screen bg-cover bg-no-repeat bg-center py-1'>
       <Hero/>
-      <LatestEvents data={allData} data-aos="fade-left" />
+      <LatestEvents allData={allData} data-aos="fade-left" />
       <Testimonials heading={'Testimonials and Reviews'}/>
       <Services/>
       <ClientTestimonial heading={'Our Clients'}/>
