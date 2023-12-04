@@ -30,9 +30,6 @@ function EventsMain({ allData }) {
         'videos': []
     })
 
-    const handleOnReady = (event) => {
-        // event.target.pauseVideo();
-    }
     const topContainer = useRef()
     useEffect(() => {
         topContainer.current.scrollIntoView({ block: "end", behavior: 'smooth' });
@@ -77,6 +74,16 @@ function EventsMain({ allData }) {
                 </div> : <Photos />}
 
 
+                {("teams" in data) ? <div className='rules-section w-[95%] md:w-5/6 mx-auto my-16'>
+                    <div className='flex flex-wrap items-center justify-center gap-10 md:justify-between md:gap-8 font-bold md:text-6xl text-2xl mx-auto my-10 drop-shadow-lg text-white'>Get to know your players! -
+
+                        <Link to={`/teams/${data.e_id}`}> <button className='btn btn-primary w-64 md:mr-40'>See all teams </button></Link>
+
+                    </div>
+
+                </div> : <></>}
+
+
                 {data.result.length > 0 ? <div className='rules-section w-[95%] md:w-5/6 mx-auto my-16'>
                     <div className='font-bold md:text-6xl text-2xl mx-auto my-10 drop-shadow-lg text-white'>Results </div>
                     {
@@ -93,7 +100,7 @@ function EventsMain({ allData }) {
                     <div className='flex flex-wrap gap-16 items-center justify-center'>
                         {
                             data.videos.map((videos, id) => {
-                                return <YouTube className='md:w-[25%]' videoId={videos} key={id} opts={opts} onReady={handleOnReady} />
+                                return <YouTube className='md:w-[25%]' videoId={videos} key={id} opts={opts}/>
                             })
                         }
                     </div>

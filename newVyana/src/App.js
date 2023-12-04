@@ -16,6 +16,8 @@ import DetailedFaceRecognition from "./components/detailedServices/DetailedFaceR
 import DetailedLiveScoring from "./components/detailedServices/DetailedLiveScoring";
 import Contact from "./components/contact/Contact";
 import Footer from './components/footer/Footer';
+import ParticipatingTeams from "./components/ParticipatingTeams/ParticipatingTeams";
+import TeamTable from "./components/ParticipatingTeams/TeamTable";
 
 
 function App() {
@@ -35,6 +37,8 @@ function App() {
         <Route path="/" element={<MainArea allData={allData}/>}/>
         <Route path="/latestEvents" element={<EventExplorer allData={allData}/>}/>
         <Route path="/event/*" element={<EventsMain allData={allData}/>}/>
+        <Route path="/teams/*" element={<ParticipatingTeams/>}/>
+        <Route path="/team/*" element={<TeamTable/>}/>
         <Route path="/photos/*" element={<Photos/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/auction" element={<DetailedServices/>}/>
