@@ -20,6 +20,7 @@ function TeamTable() {
         try {
             fetch(`https://vyana-sports-back-end.vercel.app/events/${id}`).then(res => res.json()).then(result => {
                 setData(result)
+                console.log(('mastHead' in result))
                 setLoading(true)
             })
 
@@ -31,8 +32,11 @@ function TeamTable() {
     return (
         <div>
             <div ref={topContainer} ></div>
+            
             <div className="overflow-x-auto min-h-screen">
-                {loading ? <table className="table table-zebra">
+                {loading ?<>
+                 {('mastHead' in data)?<img src={data.mastHead} className="h-64 w-full" alt="" />:<></>}
+                 <table className="table table-zebra">
                     {/* head */}
                     <thead>
                         <tr>
@@ -47,7 +51,7 @@ function TeamTable() {
                             data.teams[name].players.map((teams,id) => {
 
                                 return <tr>
-                                    <th>{id}</th>
+                                    <th>{id+1}</th>
                                     <td>{teams.name}</td>
                                     <td>{teams.member}</td>
                                     <td>{teams.cabMember==0?'NO':'YES'}</td>
@@ -58,7 +62,7 @@ function TeamTable() {
 
 
                     </tbody>
-                </table> : <></>}
+                </table></> : <></>}
             </div>
 
         </div>
