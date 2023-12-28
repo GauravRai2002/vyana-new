@@ -75,7 +75,7 @@ function EventsMain({ allData }) {
                 </div> : <Photos />}
 
 
-                {("data" in data) ?data.teams.length!=0 ? <div className='rules-section w-[95%] md:w-5/6 mx-auto my-16'>
+                {("teams" in data) ?data.teams.length!=0 ? <div className='rules-section w-[95%] md:w-5/6 mx-auto my-16'>
                     <div className='flex flex-wrap items-center justify-center gap-10 md:justify-between md:gap-8 font-bold md:text-6xl text-2xl mx-auto my-10 drop-shadow-lg text-white'>Get to know your players! -
 
                         <Link to={`/teams/${data.e_id}`}> <button className='btn btn-primary w-64 md:mr-40'>See all teams </button></Link>
