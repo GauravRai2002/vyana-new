@@ -40,6 +40,7 @@ function EventsMain({ allData }) {
         try {
             fetch(`https://vyana-sports-back-end.vercel.app/events/${id}`).then(res => res.json()).then(result => {
                 setData(result)
+                console.log(result)
                 if(result.result.length==0 && result.videos.length==0  && result.schedule.length==0 && result.rules.length==0){
                     setShowPhotos(true)
                 }
@@ -74,14 +75,24 @@ function EventsMain({ allData }) {
                 </div> : <Photos />}
 
 
-                {("teams" in data) ? <div className='rules-section w-[95%] md:w-5/6 mx-auto my-16'>
+                {("data" in data) ?data.teams.length!=0 ? <div className='rules-section w-[95%] md:w-5/6 mx-auto my-16'>
                     <div className='flex flex-wrap items-center justify-center gap-10 md:justify-between md:gap-8 font-bold md:text-6xl text-2xl mx-auto my-10 drop-shadow-lg text-white'>Get to know your players! -
 
                         <Link to={`/teams/${data.e_id}`}> <button className='btn btn-primary w-64 md:mr-40'>See all teams </button></Link>
 
                     </div>
 
-                </div> : <></>}
+                </div>:<></> : <></>}
+
+
+                {("cricheroes" in data) ? data.cricheroes!=''? <div className='rules-section w-[95%] md:w-5/6 mx-auto my-16'>
+                    <div className='flex flex-wrap items-center justify-center gap-10 md:justify-between md:gap-8 font-bold md:text-6xl text-2xl mx-auto my-10 drop-shadow-lg text-white'>Follow the action live! -
+
+                        <a target='_blank' href={`${data.cricheroes}`}> <button className='btn btn-primary w-64 md:mr-40'>Live Match results </button></a>
+
+                    </div>
+
+                </div>:<></> : <></>}
 
 
                 {data.result.length > 0 ? <div className='rules-section w-[95%] md:w-5/6 mx-auto my-16'>
