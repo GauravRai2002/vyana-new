@@ -36,7 +36,7 @@ function TeamTable() {
             <div className="overflow-x-auto min-h-screen md:w-4/6 mx-auto">
                 {loading ?<>
                  {('mastHead' in data)?<img src={data.mastHead} className="h-64 w-full" alt="" />:<></>}
-                 <h1 className='text-white text-4xl text-center m-2'>{data.teams[name].name}</h1>
+                 <h1 className='text-4xl text-center m-2'>{data.teams[name].name}</h1>
                  <table className="table table-zebra">
                     {/* head */}
                     <thead>
