@@ -28,7 +28,7 @@ function ParticipatingTeams() {
     return(
      <div className='min-h-screen main-area-main p-1'>
             <div ref={topContainer} ></div>
-            {('mastHead' in data)?<img src={data.mastHead} className="h-64 w-full" alt="" />:<></>}
+            {('mastHead' in data)?<img src={data.mastHead} className="h-64 md:w-4/6 mx-auto" alt="" />:<></>}
             <div className='flex w-full min-h-screen md:w-5/6 mx-auto p-3 flex-wrap gap-3 md:gap-20 items-center justify-center my-6'>
                 {
                     data.teams.map((te,id)=> {

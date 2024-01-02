@@ -19,6 +19,7 @@ import aba from '../../assets/aba.jpg'
 import vaibhav from '../../assets/vaibhav.jpeg'
 import nitinJ from '../../assets/nitinJ.jpg'
 import ankit from '../../assets/ankit.jpg'
+import saket from '../../assets/saket.jpg'
 
 
 
@@ -95,10 +96,13 @@ function Testimonials({heading}) {
 
                 <SingleTestimonial icon={nitinJ} review={`Amazing experience to participate in tournaments organised by Mr. Khettry!! Kudos to you and your team and looking forward playing more such events. Cheers`} name={`Nitin Jalan`}/>
 
-                <SingleTestimonial icon={def} review={`Very well organised… abhinev and his team works tirelessly to ensure the success of every tournament… moreover they make the event grand and also takes note of any suggestions/ ideas and make changes immediately …`} name={`Siddharth Khaitan`}/>
+                <SingleTestimonial icon={def} review={`Very well organised… Abhinev and his team works tirelessly to ensure the success of every tournament… moreover they make the event grand and also takes note of any suggestions/ ideas and make changes immediately …`} name={`Siddharth Khaitan`}/>
 
 
                 <SingleTestimonial icon={ankit} review={`Champion organiser of sports events. Especially cricket. Live streaming, professional umpires, live scoring on the app. Fantastic overall experience!`} name={`Ankit Patni`}/>
+
+
+                <SingleTestimonial icon={saket} review={`A 5-Star Rating is also less for Abhenav whose passion for Cricket is quite unparalleled. He and his team at Vyana Sports has transcended all barriers and elevated cricket to an entirely different level with their organizational skills. They leave NO stone unturned in providing the absolute best in terms of ground, facilities, equipment and a larger than life environment for us humble cricket aficionados. Abhenav.. you are a STAR !! Please keep up the good work and thanks a lot for taking such good care of all of us without ever battling an eyelid !`} name={`Saket Sutodiya`}/>
 
             </Slider>
         </div>
