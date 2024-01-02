@@ -99,7 +99,7 @@ function EventsMain({ allData }) {
                     <div className='font-bold md:text-6xl text-2xl mx-auto my-10 drop-shadow-lg text-white'>Results </div>
                     {
                         data.result.map((result, id) => {
-                            return <img draggable='false' src={result.url} key={id} alt="rules" className='w-4/6 mx-auto' />
+                            return <img draggable='false' src={result.url} key={id} alt="rules" className='md:w-4/6 mx-auto' />
                         })
                     }
                 </div> : <></>}
@@ -122,7 +122,7 @@ function EventsMain({ allData }) {
                     <div className='font-bold md:text-6xl text-2xl mx-auto my-10 drop-shadow-lg text-white'>Teams and Schedule </div>
                     {
                         data.schedule.map((rule, id) => {
-                            return <img draggable='false' src={rule.url} key={id} alt="rules" className='w-4/6 mx-auto' />
+                            return <img draggable='false' src={rule.url} key={id} alt="rules" className='md:w-4/6 mx-auto' />
                         })
                     }
                 </div> : <></>}
@@ -133,7 +133,7 @@ function EventsMain({ allData }) {
                     <div className='font-bold md:text-6xl text-2xl mx-auto my-10 drop-shadow-lg text-white'>Rules And Regulations </div>
                     {
                         data.rules.map((rule, id) => {
-                            return <img draggable="false" src={rule.url} key={id} alt="rules" className='w-4/6 mx-auto' />
+                            return <img draggable="false" src={rule.url} key={id} alt="rules" className='md:w-4/6 mx-auto' />
                         })
                     }
                 </div> : <></>}
