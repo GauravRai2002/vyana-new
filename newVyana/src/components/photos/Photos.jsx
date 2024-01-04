@@ -53,7 +53,7 @@ function Photos() {
         setIndex(newIndex)
     }
     return (<>
-        <div className="photos-area-main py-1 relative">
+        <div className="photos-area-main py-1 relative  min-h-screen">
             <div className=' flex flex-wrap items-start justify-center gap-0.5 mx-1 my-16 '>
                 {isLoaded ?
                     photos.map((photo, id) => {
